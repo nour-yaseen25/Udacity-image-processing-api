@@ -1,0 +1,1 @@
+{"version":3,"file":"teachers.js","sourceRoot":"","sources":["../../../src/routes/api/teachers.ts"],"names":[],"mappings":";;;;;AAAA,sDAA8B;AAE9B,MAAM,QAAQ,GAAG,iBAAO,CAAC,MAAM,EAAE,CAAC;AAElC,QAAQ,CAAC,GAAG,CAAC,GAAG,EAAE,CAAC,GAAG,EAAE,GAAG,EAAE,EAAE;IAC7B,GAAG,CAAC,IAAI,CAAC,sBAAsB,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC;AAEH,kBAAe,QAAQ,CAAC"}
