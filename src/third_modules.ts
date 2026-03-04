@@ -2,11 +2,10 @@
 
 import _ from 'lodash';
 
-console.log(_.add(3,4));//generic add function from lodash, not our custom one
+console.log(_.add(3, 4)); //generic add function from lodash, not our custom one
 // .d.ts files are declaration files that provide type information about JavaScript libraries.
-//  They allow TypeScript to understand the types of variables, functions, 
+//  They allow TypeScript to understand the types of variables, functions,
 // and classes in those libraries, enabling better type checking and autocompletion when using them in TypeScript code.
-
 
 //npm run build to compile TypeScript to JavaScript, then npm start to run the compiled JavaScript code.
 
@@ -21,6 +20,5 @@ console.log(_.add(3,4));//generic add function from lodash, not our custom one
 // npm install @types/lodash --save-dev
 // This will add the type definitions for lodash to your project's devDependencies, allowing TypeScript to understand the types of lodash functions when you import and use them in your code.
 
-console.log(_.multiply(5, 8)); 
+console.log(_.multiply(5, 8));
 // using the multiply function from lodash, which we added to our custom type definitions in types/3rdparty/index.d.ts
-

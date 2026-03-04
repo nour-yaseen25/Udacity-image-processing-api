@@ -141,6 +141,11 @@ Unit tests are the least expensive to run and maintain, so they should be used m
 The testing pyramid is a best practice for organizing tests and ensuring that the most important tests are run more frequently than less important tests.
 */
 const supertest_1 = __importDefault(require("supertest"));
+// supertest is a library that allows you to test HTTP endpoints in your application.
+// It provides a high-level API for making HTTP requests and asserting the responses.
+// In this code, we are using supertest to test the endpoints of our Express application.
+// We create a request object by passing our app to supertest,
+// and then we can use this request object to make HTTP requests to our endpoints and assert the responses.
 const index_1 = __importDefault(require("../index"));
 const request = (0, supertest_1.default)(index_1.default);
 describe('Test endpoint responses', () => {

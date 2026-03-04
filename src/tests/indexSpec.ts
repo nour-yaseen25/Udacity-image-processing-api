@@ -28,8 +28,6 @@ it('expect arrays.addArr(numArr) to equal 18', () => {
 
 //npm run jasmine to run the tests in the spec folder, and it will look for files that end with Spec.ts and run the tests in those files.
 
-
-
 /*Jasmine uses Suites and Specs
 Spec: an individual test
 Suite: a collection of similar tests related to one function
@@ -104,8 +102,6 @@ Jasmine started
     √ expect arrays.addArr(numArr) to equal 18
  */
 
-
-
 /*Testing Asynchronous Code
 The key to testing async code is letting Jasmine know when it’s ready to be tested.
 
@@ -122,7 +118,6 @@ Testing promise resolution and rejection with ES6 Promise Matchers Library(opens
 .toBeRejected() tests if a promise is rejected and will return true if the promise is rejected
 .toBeRejectedWith(expected value) tests if the expected error is returned
 */
-
 
 /*Organize Test Folders
 A common practice is to create a spec folder in the root directory of the project to hold all test files.
@@ -152,10 +147,10 @@ The testing pyramid is a best practice for organizing tests and ensuring that th
 
 import supertest from 'supertest';
 
-// supertest is a library that allows you to test HTTP endpoints in your application. 
+// supertest is a library that allows you to test HTTP endpoints in your application.
 // It provides a high-level API for making HTTP requests and asserting the responses.
 // In this code, we are using supertest to test the endpoints of our Express application.
-// We create a request object by passing our app to supertest, 
+// We create a request object by passing our app to supertest,
 // and then we can use this request object to make HTTP requests to our endpoints and assert the responses.
 
 import app from '../index';

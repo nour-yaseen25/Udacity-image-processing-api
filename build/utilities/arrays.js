@@ -31,6 +31,6 @@ exports.default = {
     concatArr,
     addArr,
     lgNum,
-    cut3,
+    cut3
 };
 //# sourceMappingURL=arrays.js.map

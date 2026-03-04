@@ -7,4 +7,3 @@ teachers.get('/', (req, res) => {
 });
 
 export default teachers;
-

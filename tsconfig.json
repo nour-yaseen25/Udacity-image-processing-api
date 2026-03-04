@@ -2,18 +2,18 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-   "rootDir": "./src",
+    "rootDir": "./src",
     "outDir": "./build",
-//"typeRoots": ["./types"],
+    //"typeRoots": ["./types"],
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "commonjs", // use CommonJS for Jasmine/Node test runner
     "target": "es2020",
-    "types": ["node","jasmine"], // was node when dealing with nodejs, but now we are using jasmine for testing, so we need to add jasmine to types
+    "types": ["node", "jasmine"], // was node when dealing with nodejs, but now we are using jasmine for testing, so we need to add jasmine to types
     // For nodejs:
-    "lib": ["ES6","DOM"],
+    "lib": ["ES6", "DOM"],
     // "types": ["node"],
-    // and npm install -D @types/node 
+    // and npm install -D @types/node
 
     // Other Outputs
     "sourceMap": true,
@@ -34,7 +34,7 @@
 
     // Recommended Options
     "strict": true,
-    "noImplicitAny": true, 
+    "noImplicitAny": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": false,
     "isolatedModules": true,
@@ -44,9 +44,16 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true
   },
-   "include": ["src/**/*.ts"],             /* Include all TypeScript files in the root directory */
-  "exclude": ["node_modules", "build","spec", "dist",".vscode"]  /* Exclude the node_modules, build, spec and dist directories */
+  "include": [
+    "src/**/*.ts"
+  ] /* Include all TypeScript files in the root directory */,
+  "exclude": [
+    "node_modules",
+    "build",
+    "spec",
+    "dist",
+    ".vscode"
+  ] /* Exclude the node_modules, build, spec and dist directories */
 }
-
 
 // use CommonJS for Jasmine/Node test runner but with typescript, we can use esnext module syntax, so we need to change it to commonjs for jasmine testing

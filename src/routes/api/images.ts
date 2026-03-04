@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
   try {
     const outputPath = await resizeImage(filename, width, height);
     return res.sendFile(outputPath);
-  } catch (error) {
+  } catch {
     return res.status(500).send('Error processing image');
   }
 });

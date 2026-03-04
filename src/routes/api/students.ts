@@ -7,4 +7,3 @@ students.get('/', (req, res) => {
 });
 
 export default students;
-

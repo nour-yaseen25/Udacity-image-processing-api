@@ -12,33 +12,33 @@ const rl = readline.createInterface({
 
 // Create questions for STDIN Input from console.
 const menuQ = () => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     // (readable, writeable from readline interface)
-    rl.question('Your choice: ', (answer:string) => {
+    rl.question('Your choice: ', (answer: string) => {
       resolve(answer);
     });
   });
 };
 
 const milkQ = () => {
-  return new Promise((resolve, reject) => {
-    rl.question('How many cups of milk to add? ', (answer:string) => {
+  return new Promise((resolve) => {
+    rl.question('How many cups of milk to add? ', (answer: string) => {
       resolve(answer);
     });
   });
 };
 
 const espressoQ = () => {
-  return new Promise((resolve, reject) => {
-    rl.question('How many shots of espresso to add? ', (answer:string) => {
+  return new Promise((resolve) => {
+    rl.question('How many shots of espresso to add? ', (answer: string) => {
       resolve(answer);
     });
   });
 };
 
 const peppermintQ = () => {
-  return new Promise((resolve, reject) => {
-    rl.question('How many shots of peppermint to add? ', (answer:string) => {
+  return new Promise((resolve) => {
+    rl.question('How many shots of peppermint to add? ', (answer: string) => {
       resolve(answer);
     });
   });
@@ -75,7 +75,7 @@ class DarkChocolateMocha extends Mocha {
 // inherits from Mocha
 class PeppermintMocha extends Mocha {
   // add peppermint property
-  peppermintSyrup : number;
+  peppermintSyrup: number;
   constructor() {
     // include super to pull in parent constructor
     super();
@@ -107,14 +107,14 @@ const showMenu = async () => {
 // User questions
 const userOptions = async (
   mochaObject: Mocha | PeppermintMocha
-):Promise<void> => {
-  const milkPicked = await milkQ() as unknown as string;
+): Promise<void> => {
+  const milkPicked = (await milkQ()) as unknown as string;
   const milkChoice = parseInt(milkPicked);
-  const espPicked = await espressoQ() as unknown as string;
+  const espPicked = (await espressoQ()) as unknown as string;
   const espChoice = parseInt(espPicked);
   // If peppermint mocha
   if (mochaObject instanceof PeppermintMocha) {
-    const pepPicked = await peppermintQ() as unknown as string;
+    const pepPicked = (await peppermintQ()) as unknown as string;
     const pepChoice = parseInt(pepPicked);
     mochaObject.peppermintSyrup = pepChoice;
   }
@@ -126,9 +126,9 @@ const userOptions = async (
 
 const main = () => {
   let menuChoice = 0;
-  const buildMocha = async () :Promise<void>=> {
+  const buildMocha = async (): Promise<void> => {
     do {
-      const optionPicked = ((await showMenu()) as unknown) as string;
+      const optionPicked = (await showMenu()) as unknown as string;
       menuChoice = parseInt(optionPicked);
       switch (menuChoice) {
         case 0: {

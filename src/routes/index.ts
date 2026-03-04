@@ -17,8 +17,7 @@ routes.use('/images', imageRoute); //this will prefix all routes defined in the 
 
 export default routes;
 
-
-//sometimes the server may not stop properly when you stop it with Ctrl+C, and it may still be running in the background, 
+//sometimes the server may not stop properly when you stop it with Ctrl+C, and it may still be running in the background,
 // which can cause issues when you try to start it again.
 //To fix this, you can add a script to your package.json file that will kill all node processes, which will stop the server and allow you to start it again without any issues.
 //Because the port is already in use, you can change the port number in your index.ts file to a different number, such as 3001, to avoid conflicts with any other processes that may be using the same port.

@@ -25,9 +25,7 @@ const resizeImage = async (
   }
 
   // Resize and save
-  await sharp(inputPath)
-    .resize(width, height)
-    .toFile(outputPath);
+  await sharp(inputPath).resize(width, height).toFile(outputPath);
 
   return outputPath;
 };

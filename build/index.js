@@ -51,19 +51,19 @@ const express_1 = __importDefault(require("express"));
 const loggor_1 = __importDefault(require("./utilities/loggor"));
 const index_1 = __importDefault(require("./routes/index"));
 //to test the routes, you can use a tool like Postman to send a GET request to http://localhost:3000/ and see if the response is 'Routes are working!'
-//create your application 
+//create your application
 const app = (0, express_1.default)();
 const port = 3001;
 //use the routes defined in the routes folder
 app.use('/api', index_1.default); //this will prefix all routes defined in the routes folder with /api, so the route defined in routes/index.ts will be accessible at http://localhost:3000/api/
 app.get('/countries', loggor_1.default, (req, res) => {
-    res.send('countries!'); //send a response to the client when they access the root URL 
+    res.send('countries!'); //send a response to the client when they access the root URL
 });
-//when the url http://localhost:3000/countries is accessed, 
-// the logger middleware function will be called first, 
+//when the url http://localhost:3000/countries is accessed,
+// the logger middleware function will be called first,
 // which will log the request made to the server, and then the response 'countries!' will be sent to the client.
 app.get('/', (req, res) => {
-    res.send('Image Processing API'); //send a response to the client when they access the root URL 
+    res.send('Image Processing API'); //send a response to the client when they access the root URL
 });
 app.listen(port, () => {
     console.log(`Server app listening at http://localhost:${port}`);

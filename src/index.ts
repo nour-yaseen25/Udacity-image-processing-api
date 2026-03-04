@@ -55,25 +55,23 @@ import routes from './routes/index';
 
 //to test the routes, you can use a tool like Postman to send a GET request to http://localhost:3000/ and see if the response is 'Routes are working!'
 
-//create your application 
+//create your application
 const app = express();
 const port = 3001;
 
 //use the routes defined in the routes folder
 app.use('/api', routes); //this will prefix all routes defined in the routes folder with /api, so the route defined in routes/index.ts will be accessible at http://localhost:3000/api/
 
-app.get('/countries',logger, (req, res) => {
-  res.send('countries!'); //send a response to the client when they access the root URL 
+app.get('/countries', logger, (req, res) => {
+  res.send('countries!'); //send a response to the client when they access the root URL
 });
-//when the url http://localhost:3000/countries is accessed, 
-// the logger middleware function will be called first, 
+//when the url http://localhost:3000/countries is accessed,
+// the logger middleware function will be called first,
 // which will log the request made to the server, and then the response 'countries!' will be sent to the client.
 
-
 app.get('/', (req, res) => {
-  res.send('Image Processing API'); //send a response to the client when they access the root URL 
+  res.send('Image Processing API'); //send a response to the client when they access the root URL
 });
-
 
 app.listen(port, () => {
   console.log(`Server app listening at http://localhost:${port}`);
@@ -83,7 +81,6 @@ export default app;
 
 //npm run start to start the server and access it at http://localhost:3000
 //nodemon to automatically restart the server when changes are made to the code
-
 
 //csv().fromFile('data.csv')
 //Create an endpoint for convert.

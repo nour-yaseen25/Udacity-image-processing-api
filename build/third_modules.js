@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const lodash_1 = __importDefault(require("lodash"));
 console.log(lodash_1.default.add(3, 4)); //generic add function from lodash, not our custom one
 // .d.ts files are declaration files that provide type information about JavaScript libraries.
-//  They allow TypeScript to understand the types of variables, functions, 
+//  They allow TypeScript to understand the types of variables, functions,
 // and classes in those libraries, enabling better type checking and autocompletion when using them in TypeScript code.
 //npm run build to compile TypeScript to JavaScript, then npm start to run the compiled JavaScript code.
 // To install a third-party library, you can use npm (Node Package Manager) to add it to your project.

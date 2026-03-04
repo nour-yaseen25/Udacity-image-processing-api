@@ -5,7 +5,7 @@ Turn on all strict checking by setting strict to true in your tsconfiig.json set
 
 */
 
-//express server 
+//express server
 //add to package.json
 /*
 "scripts": {
@@ -14,12 +14,11 @@ Turn on all strict checking by setting strict to true in your tsconfiig.json set
 
 }
 */
- // npm run start to start the server
- // node build/. to run the server without nodemon, which will not automatically restart the server when changes are made to the code
+// npm run start to start the server
+// node build/. to run the server without nodemon, which will not automatically restart the server when changes are made to the code
 
-
- //middleware
- /*
+//middleware
+/*
  Middleware is a function that has access to the request and response objects, and the next function in the application's request-response cycle.
 Functionality that runs between a request to the server and the response from the server
 

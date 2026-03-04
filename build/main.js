@@ -15,7 +15,7 @@ const rl = readline_1.default.createInterface({
 });
 // Create questions for STDIN Input from console.
 const menuQ = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         // (readable, writeable from readline interface)
         rl.question('Your choice: ', (answer) => {
             resolve(answer);
@@ -23,21 +23,21 @@ const menuQ = () => {
     });
 };
 const milkQ = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         rl.question('How many cups of milk to add? ', (answer) => {
             resolve(answer);
         });
     });
 };
 const espressoQ = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         rl.question('How many shots of espresso to add? ', (answer) => {
             resolve(answer);
         });
     });
 };
 const peppermintQ = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         rl.question('How many shots of peppermint to add? ', (answer) => {
             resolve(answer);
         });
@@ -96,13 +96,13 @@ const showMenu = async () => {
 };
 // User questions
 const userOptions = async (mochaObject) => {
-    const milkPicked = await milkQ();
+    const milkPicked = (await milkQ());
     const milkChoice = parseInt(milkPicked);
-    const espPicked = await espressoQ();
+    const espPicked = (await espressoQ());
     const espChoice = parseInt(espPicked);
     // If peppermint mocha
     if (mochaObject instanceof PeppermintMocha) {
-        const pepPicked = await peppermintQ();
+        const pepPicked = (await peppermintQ());
         const pepChoice = parseInt(pepPicked);
         mochaObject.peppermintSyrup = pepChoice;
     }

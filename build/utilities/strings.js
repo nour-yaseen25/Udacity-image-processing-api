@@ -6,7 +6,7 @@ const concat = (str1, str2) => {
 const capitalize = (str) => {
     return str
         .split(' ')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
 };
 const upperCase = (str) => {
