@@ -192,6 +192,12 @@ Unit tests include:
 - Base endpoint test
 - Missing parameter validation
 - Image processing test
+- You can test error cases manually using:
+
+/api/images
+/api/images?filename=fjord
+/api/images?filename=fjord&width=a&height=200
+/api/images?filename=wrongname&width=200&height=200
 
 Run tests with:
 

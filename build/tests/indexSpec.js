@@ -161,5 +161,17 @@ describe('Test endpoint responses', () => {
         const response = await request.get('/api/images?filename=fjord&width=200&height=200');
         expect(response.status).toBe(200);
     });
+    it('returns 400 for invalid width', async () => {
+        const response = await request.get('/api/images?filename=fjord&width=a&height=200');
+        expect(response.status).toBe(400);
+    });
+    it('returns 400 for negative height', async () => {
+        const response = await request.get('/api/images?filename=fjord&width=200&height=-1');
+        expect(response.status).toBe(400);
+    });
+    it('returns 404 for non-existing image', async () => {
+        const response = await request.get('/api/images?filename=wrongname&width=200&height=200');
+        expect(response.status).toBe(404);
+    });
 });
 //# sourceMappingURL=indexSpec.js.map
