@@ -1,0 +1,33 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "nodemon src/index.ts",
+    "build": "npx tsc",
+    "jasmine": "jasmine",
+    "clean": "taskkill /F /IM node.exe" 
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/csvtojson": "^1.1.5",
+    "@types/express": "^5.0.6",
+    "@types/jasmine": "^6.0.0",
+    "@types/lodash": "^4.17.24",
+    "@types/node": "^25.3.3",
+    "jasmine": "^6.1.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.14",
+    "express": "^5.2.1",
+    "lodash": "^4.17.23",
+    "supertest": "^7.2.2"
+  }
+}
