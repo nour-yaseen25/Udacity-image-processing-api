@@ -72,7 +72,9 @@ Runs Jasmine unit tests.
 
 ---
 ### Clean Running Node Processes (Windows)
+```bash
 npm run clean
+```
 
 Kills all running Node.js processes.
 
@@ -140,7 +142,7 @@ assets/full/fjord.jpg
 
 # Caching Behavior
 
-* First request:
+- First request:
 
   * Image is resized using Sharp
   * Saved inside:
@@ -237,7 +239,12 @@ spec/
 * Please ensure at least one image (e.g., `fjord.jpg`) exists inside `assets/full/`.
 * Cached images will automatically be generated in `assets/thumb/`.
 * No database is used — all file operations are disk-based.
+* Run npm run lint and npm run format to ensure code follows standards.
 
 ---
 
-# My Name : Nour Ashraf Yaseen
+## 👩‍💻 Developed By
+
+Nour Ashraf Yaseen  
+Full Stack JavaScript Developer (In Progress 🚀)
+GitHub: https://github.com/nour-yaseen25
