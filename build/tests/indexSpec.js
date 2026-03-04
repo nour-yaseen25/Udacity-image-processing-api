@@ -1,16 +1,14 @@
-'use strict';
+"use strict";
 /*
 When creating files for tests,
 a best practice is to name the .ts file the same as the .js file to be tested
 with Spec appended to the end. The more tests needed to be run, the more test files will need to be created.
 Be sure to follow this best practice to keep track of the test file that contains the tests for each .js file.
 */
-var __importDefault =
-  (this && this.__importDefault) ||
-  function (mod) {
-    return mod && mod.__esModule ? mod : { default: mod };
-  };
-Object.defineProperty(exports, '__esModule', { value: true });
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 /*Jasmine is a testing framework for JavaScript and TypeScript that allows developers to write tests for their code.
 Jasmine provides a set of functions and matchers that can be used to write tests for JavaScript and TypeScript code.
 Jasmine tests are written in a describe block, which is used to group related tests together.
@@ -142,22 +140,26 @@ End-to-end tests are the most expensive to run and maintain, so they should be u
 Unit tests are the least expensive to run and maintain, so they should be used more frequently than integration and end-to-end tests.
 The testing pyramid is a best practice for organizing tests and ensuring that the most important tests are run more frequently than less important tests.
 */
-const supertest_1 = __importDefault(require('supertest'));
+const supertest_1 = __importDefault(require("supertest"));
 // supertest is a library that allows you to test HTTP endpoints in your application.
 // It provides a high-level API for making HTTP requests and asserting the responses.
 // In this code, we are using supertest to test the endpoints of our Express application.
 // We create a request object by passing our app to supertest,
 // and then we can use this request object to make HTTP requests to our endpoints and assert the responses.
-const index_1 = __importDefault(require('../index'));
+const index_1 = __importDefault(require("../index"));
 const request = (0, supertest_1.default)(index_1.default);
 describe('Test endpoint responses', () => {
-  it('returns 200 for base endpoint', async () => {
-    const response = await request.get('/');
-    expect(response.status).toBe(200);
-  });
-  it('returns 400 if missing params', async () => {
-    const response = await request.get('/api/images');
-    expect(response.status).toBe(400);
-  });
+    it('returns 200 for base endpoint', async () => {
+        const response = await request.get('/');
+        expect(response.status).toBe(200);
+    });
+    it('returns 400 if missing params', async () => {
+        const response = await request.get('/api/images');
+        expect(response.status).toBe(400);
+    });
+    it('returns 200 for valid image resize request', async () => {
+        const response = await request.get('/api/images?filename=fjord&width=200&height=200');
+        expect(response.status).toBe(200);
+    });
 });
 //# sourceMappingURL=indexSpec.js.map

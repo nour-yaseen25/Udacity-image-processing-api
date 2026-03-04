@@ -14,6 +14,14 @@ const resizeImage = async (
   height: number
 ): Promise<string> => {
   const inputPath = path.resolve('assets/full', `${filename}.jpg`);
+
+  const outputDir = path.resolve('assets/thumb');
+
+  // Ensure directory exists
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
   const outputPath = path.resolve(
     'assets/thumb',
     `${filename}_${width}_${height}.jpg`

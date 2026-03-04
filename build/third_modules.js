@@ -1,12 +1,10 @@
-'use strict';
+"use strict";
 //A popular library for performing utility functions for things like arrays and numbers
-var __importDefault =
-  (this && this.__importDefault) ||
-  function (mod) {
-    return mod && mod.__esModule ? mod : { default: mod };
-  };
-Object.defineProperty(exports, '__esModule', { value: true });
-const lodash_1 = __importDefault(require('lodash'));
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const lodash_1 = __importDefault(require("lodash"));
 console.log(lodash_1.default.add(3, 4)); //generic add function from lodash, not our custom one
 // .d.ts files are declaration files that provide type information about JavaScript libraries.
 //  They allow TypeScript to understand the types of variables, functions,
