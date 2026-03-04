@@ -71,28 +71,27 @@ npm run test
 Runs Jasmine unit tests.
 
 ---
- Clean Running Node Processes (Windows)
+### Clean Running Node Processes (Windows)
 npm run clean
 
 Kills all running Node.js processes.
+
 ---
-Run ESLint
+### Run ESLint
 npm run lint
 
 Runs ESLint on all .ts files inside the src/ directory.
 
-Expected result:
+Expected result: No linting errors
 
-No linting errors
 ---
-Run Prettier Formatter
+### Run Prettier Formatter
 npm run format
 
 Formats all project files using Prettier.
 
-Expected result:
+Expected result: No formatting errors
 
-No formatting errors
 ---
 # 🌐 API Endpoints
 
