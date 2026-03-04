@@ -74,11 +74,7 @@ Runs Jasmine unit tests.
 ---
 
 ### Clean Running Node Processes (Windows)
-<<<<<<< HEAD
-
-=======
 ```bash
->>>>>>> df12ea2ecc541c044a37ecdad85b8375b0819f94
 npm run clean
 ```
 
@@ -154,14 +150,9 @@ assets/full/fjord.jpg
 # Caching Behavior
 
 - First request:
-<<<<<<< HEAD
-  - Image is resized using Sharp
-  - Saved inside:
-=======
 
   * Image is resized using Sharp
   * Saved inside:
->>>>>>> df12ea2ecc541c044a37ecdad85b8375b0819f94
 
     ```
     assets/thumb/
@@ -252,16 +243,10 @@ spec/
 
 # 👨‍💻 Notes for Reviewer
 
-<<<<<<< HEAD
-- Please ensure at least one image (e.g., `fjord.jpg`) exists inside `assets/full/`.
-- Cached images will automatically be generated in `assets/thumb/`.
-- No database is used — all file operations are disk-based.
-=======
 * Please ensure at least one image (e.g., `fjord.jpg`) exists inside `assets/full/`.
 * Cached images will automatically be generated in `assets/thumb/`.
 * No database is used — all file operations are disk-based.
 * Run npm run lint and npm run format to ensure code follows standards.
->>>>>>> df12ea2ecc541c044a37ecdad85b8375b0819f94
 
 ---
 
@@ -270,3 +255,4 @@ spec/
 Nour Ashraf Yaseen  
 Full Stack JavaScript Developer (In Progress 🚀)
 GitHub: https://github.com/nour-yaseen25
+
