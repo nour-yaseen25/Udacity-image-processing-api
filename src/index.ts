@@ -71,13 +71,15 @@ app.get('/countries',logger, (req, res) => {
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World!'); //send a response to the client when they access the root URL 
+  res.send('Image Processing API'); //send a response to the client when they access the root URL 
 });
 
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Server app listening at http://localhost:${port}`);
 });
+
+export default app;
 
 //npm run start to start the server and access it at http://localhost:3000
 //nodemon to automatically restart the server when changes are made to the code

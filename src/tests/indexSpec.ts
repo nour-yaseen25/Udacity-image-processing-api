@@ -149,3 +149,26 @@ End-to-end tests are the most expensive to run and maintain, so they should be u
 Unit tests are the least expensive to run and maintain, so they should be used more frequently than integration and end-to-end tests.
 The testing pyramid is a best practice for organizing tests and ensuring that the most important tests are run more frequently than less important tests.
 */
+
+import supertest from 'supertest';
+
+// supertest is a library that allows you to test HTTP endpoints in your application. 
+// It provides a high-level API for making HTTP requests and asserting the responses.
+// In this code, we are using supertest to test the endpoints of our Express application.
+// We create a request object by passing our app to supertest, 
+// and then we can use this request object to make HTTP requests to our endpoints and assert the responses.
+
+import app from '../index';
+const request = supertest(app);
+
+describe('Test endpoint responses', () => {
+  it('returns 200 for base endpoint', async () => {
+    const response = await request.get('/');
+    expect(response.status).toBe(200);
+  });
+
+  it('returns 400 if missing params', async () => {
+    const response = await request.get('/api/images');
+    expect(response.status).toBe(400);
+  });
+});

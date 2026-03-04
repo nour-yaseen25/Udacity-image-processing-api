@@ -2,6 +2,7 @@ import express from 'express';
 import teachers from './api/teachers';
 import students from './api/students';
 import school from './api/school';
+import imageRoute from './api/images';
 
 const routes = express.Router();
 
@@ -12,6 +13,7 @@ routes.get('/', (req, res) => {
 routes.use('/teachers', teachers); //this will prefix all routes defined in the teachers file with /teachers, so the route defined in teachers.ts will be accessible at http://localhost:3000/api/teachers/
 routes.use('/students', students); //this will prefix all routes defined in the students file with /students, so the route defined in students.ts will be accessible at http://localhost:3000/api/students/
 routes.use('/school', school); //this will prefix all routes defined in the school file with /school, so the route defined in school.ts will be accessible at http://localhost:3000/api/school/
+routes.use('/images', imageRoute); //this will prefix all routes defined in the imageRoute file with /images, so the route defined in imageRoute.ts will be accessible at http://localhost:3000/api/images
 
 export default routes;
 

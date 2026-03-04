@@ -6,8 +6,8 @@
   "scripts": {
     "start": "nodemon src/index.ts",
     "build": "npx tsc",
-    "jasmine": "jasmine",
-    "clean": "taskkill /F /IM node.exe" 
+    "test": "jasmine",
+    "clean": "taskkill /F /IM node.exe"
   },
   "author": "",
   "license": "ISC",
@@ -18,9 +18,12 @@
     "@types/jasmine": "^6.0.0",
     "@types/lodash": "^4.17.24",
     "@types/node": "^25.3.3",
+    "@types/supertest": "^7.2.0",
+    "eslint": "^10.0.2",
     "jasmine": "^6.1.0",
     "jasmine-spec-reporter": "^7.0.0",
     "nodemon": "^3.1.14",
+    "prettier": "^3.8.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
@@ -28,6 +31,7 @@
     "csvtojson": "^2.0.14",
     "express": "^5.2.1",
     "lodash": "^4.17.23",
+    "sharp": "^0.34.5",
     "supertest": "^7.2.2"
   }
 }
