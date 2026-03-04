@@ -241,6 +241,14 @@ spec/
 
 ---
 
+## 📝 Notes / Practice
+
+- All files include simple comments explaining each step in a clear way.  
+- The project was built incrementally, following each exercise from the course, with each step based on the previous one.  
+- Comments and explanations are included for my own reference, to quickly understand the code when revisiting it later.
+
+---
+
 # 👨‍💻 Notes for Reviewer
 
 * Please ensure at least one image (e.g., `fjord.jpg`) exists inside `assets/full/`.
