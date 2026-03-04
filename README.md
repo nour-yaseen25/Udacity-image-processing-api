@@ -48,6 +48,7 @@ http://localhost:3001
 npm run dev
 
 ```
+
 Runs the server using nodemon with TypeScript directly from: src/index.ts
 
 ---
@@ -62,7 +63,7 @@ Compiles TypeScript into JavaScript (`build/` folder).
 
 ---
 
-###  Run Tests
+### Run Tests
 
 ```bash
 npm run test
@@ -71,13 +72,17 @@ npm run test
 Runs Jasmine unit tests.
 
 ---
+
 ### Clean Running Node Processes (Windows)
+
 npm run clean
 
 Kills all running Node.js processes.
 
 ---
+
 ### Run ESLint
+
 npm run lint
 
 Runs ESLint on all .ts files inside the src/ directory.
@@ -85,7 +90,9 @@ Runs ESLint on all .ts files inside the src/ directory.
 Expected result: No linting errors
 
 ---
+
 ### Run Prettier Formatter
+
 npm run format
 
 Formats all project files using Prettier.
@@ -93,6 +100,7 @@ Formats all project files using Prettier.
 Expected result: No formatting errors
 
 ---
+
 # 🌐 API Endpoints
 
 ## Base Endpoint
@@ -103,8 +111,8 @@ GET /
 
 Expected Result:
 
-* Status code: 200
-* Response: "Image Processing API"
+- Status code: 200
+- Response: "Image Processing API"
 
 ---
 
@@ -140,18 +148,17 @@ assets/full/fjord.jpg
 
 # Caching Behavior
 
-* First request:
-
-  * Image is resized using Sharp
-  * Saved inside:
+- First request:
+  - Image is resized using Sharp
+  - Saved inside:
 
     ```
     assets/thumb/
     ```
-* Subsequent requests:
 
-  * Cached image is served directly from disk
-  * Faster response time
+- Subsequent requests:
+  - Cached image is served directly from disk
+  - Faster response time
 
 Example cached file name:
 
@@ -176,13 +183,13 @@ The API handles the following error cases:
 
 ---
 
-#  Testing
+# Testing
 
 Unit tests include:
 
-* Base endpoint test
-* Missing parameter validation
-* Image processing test
+- Base endpoint test
+- Missing parameter validation
+- Image processing test
 
 Run tests with:
 
@@ -211,32 +218,32 @@ spec/
 
 # 🛠 Technologies Used
 
-* Node.js
-* Express
-* TypeScript
-* Sharp
-* Jasmine
-* Supertest
-* ESLint
-* Prettier
+- Node.js
+- Express
+- TypeScript
+- Sharp
+- Jasmine
+- Supertest
+- ESLint
+- Prettier
 
 ---
 
 # 📌 Additional Features
 
-* Type-safe request handling
-* Clean project architecture
-* Disk-based image caching
-* Full error validation
-* Scalable folder structure for enterprise-level extension
+- Type-safe request handling
+- Clean project architecture
+- Disk-based image caching
+- Full error validation
+- Scalable folder structure for enterprise-level extension
 
 ---
 
 # 👨‍💻 Notes for Reviewer
 
-* Please ensure at least one image (e.g., `fjord.jpg`) exists inside `assets/full/`.
-* Cached images will automatically be generated in `assets/thumb/`.
-* No database is used — all file operations are disk-based.
+- Please ensure at least one image (e.g., `fjord.jpg`) exists inside `assets/full/`.
+- Cached images will automatically be generated in `assets/thumb/`.
+- No database is used — all file operations are disk-based.
 
 ---
 
